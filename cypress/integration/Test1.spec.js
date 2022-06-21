@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 import queries from '../fixtures/fixtures1.json'
-context('Testy Input BMI', () => {
+context('Testy Kalkulatora BMI', () => {
     describe('Test wprowadzania poprawnych danych', () => {
         beforeEach('Load fixtures',()=>{
             cy.fixture('fixtures1').as('urlFromAlias');
