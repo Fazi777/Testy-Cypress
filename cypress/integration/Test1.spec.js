@@ -1,8 +1,15 @@
 /// <reference types="cypress" />
+import queries from '../fixtures/fixtures1.json'
 context('Testy Input BMI', () => {
     describe('Test wprowadzania poprawnych danych', () => {
+        beforeEach('Load fixtures',()=>{
+            cy.fixture('fixtures1').as('urlFromAlias');
+        })
         it('Test 1', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+            cy.visit($elements[0].url);
+            })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -12,7 +19,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test wprowadzania złej wagi', () => {
         it('Test 2', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('AA');
             cy.get('#calculate').click()
@@ -21,7 +31,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test wprowadzania złego wzrostu', () => {
         it('Test 3', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWzrost').type('AA');
             cy.get('#calculate').click()
@@ -30,7 +43,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test Poprawności wyliczeń', () => {
         it('Test 4', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -40,7 +56,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test Zapisu pozycji Historii Pomiarów', () => {
         it('Test 5', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -50,7 +69,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test działania przycisku czyszczenia', () => {
         it('Test 6', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -61,7 +83,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test ładowania wagi z zapisu historii', () => {
         it('Test 7', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -76,7 +101,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test ładowania wzrostu z zapisu historii', () => {
         it('Test 8', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -91,7 +119,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test wskazania wzrostu BMI', () => {
         it('Test 9', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')
@@ -105,7 +136,10 @@ context('Testy Input BMI', () => {
     })
     describe('Test wskazania spadku BMI', () => {
         it('Test 10', () => {
-            cy.visit('https://fazi777.github.io/BMI-Host/');
+            cy.fixture('fixtures1').then(($elements)=>{
+                
+                cy.visit($elements[0].url);
+                })
             cy.url().should('contain', 'BMI');
             cy.get('#podajWage').type('80');
             cy.get('#podajWzrost').type('180')

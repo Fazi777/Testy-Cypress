@@ -1,0 +1,15 @@
+{
+    "projectId": "bwaf4k",
+    "viewportWidth":1080,
+    "env":{
+        "lang":"PL"
+    },
+    "reporter":"mochawesome",    
+    "reporterOptions": {
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "isoDateTime",
+        "overwrite": false,
+        "html": true,
+        "json": true
+    }
+}

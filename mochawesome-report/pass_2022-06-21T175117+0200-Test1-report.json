@@ -1,0 +1,476 @@
+{
+  "stats": {
+    "suites": 11,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-21T15:51:05.341Z",
+    "end": "2022-06-21T15:51:17.723Z",
+    "duration": 12382,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "263aabd6-fb79-42e2-ae3f-cf950689e319",
+      "title": "",
+      "fullFile": "cypress/integration/Test1.spec.js",
+      "file": "cypress/integration/Test1.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56779a89-7e5c-4f67-8c96-858cf6586f2d",
+          "title": "Testy Input BMI",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a27e0e3e-1654-4ad4-b3aa-72bf9aabd424",
+              "title": "Test wprowadzania poprawnych danych",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 1",
+                  "fullTitle": "Testy Input BMI Test wprowadzania poprawnych danych Test 1",
+                  "timedOut": null,
+                  "duration": 810,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#wynikBMI').should('contain', 'BMI');",
+                  "err": {},
+                  "uuid": "635c533c-bbe5-4aec-b9b5-4dca3d12448d",
+                  "parentUUID": "a27e0e3e-1654-4ad4-b3aa-72bf9aabd424",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "635c533c-bbe5-4aec-b9b5-4dca3d12448d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 810,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8aa7a4fd-19be-4eaa-b1d1-e2153c5e09b4",
+              "title": "Test wprowadzania złej wagi",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 2",
+                  "fullTitle": "Testy Input BMI Test wprowadzania złej wagi Test 2",
+                  "timedOut": null,
+                  "duration": 616,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('AA');\ncy.get('#calculate').click();\ncy.get('#statusWagi').should('contain', 'Błędna');",
+                  "err": {},
+                  "uuid": "1b807692-5a08-4163-9111-eaccfda6ed11",
+                  "parentUUID": "8aa7a4fd-19be-4eaa-b1d1-e2153c5e09b4",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1b807692-5a08-4163-9111-eaccfda6ed11"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 616,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "daabd387-bf37-4338-a369-489ba0e4e75a",
+              "title": "Test wprowadzania złego wzrostu",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 3",
+                  "fullTitle": "Testy Input BMI Test wprowadzania złego wzrostu Test 3",
+                  "timedOut": null,
+                  "duration": 638,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWzrost').type('AA');\ncy.get('#calculate').click();\ncy.get('#statusWzrostu').should('contain', 'Błędny');",
+                  "err": {},
+                  "uuid": "f52e45c0-e6ed-407d-88ff-cf16d5ecf698",
+                  "parentUUID": "daabd387-bf37-4338-a369-489ba0e4e75a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f52e45c0-e6ed-407d-88ff-cf16d5ecf698"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 638,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "162f3a51-562e-44f1-ac3b-092562e0ffba",
+              "title": "Test Poprawności wyliczeń",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 4",
+                  "fullTitle": "Testy Input BMI Test Poprawności wyliczeń Test 4",
+                  "timedOut": null,
+                  "duration": 612,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#wynikBMI').should('contain', '24.69');",
+                  "err": {},
+                  "uuid": "d8c82c14-4aec-459b-bbbe-ace46bc421bd",
+                  "parentUUID": "162f3a51-562e-44f1-ac3b-092562e0ffba",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d8c82c14-4aec-459b-bbbe-ace46bc421bd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 612,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "1eb60e9f-2ad4-4ed5-be71-a2387842861b",
+              "title": "Test Zapisu pozycji Historii Pomiarów",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 5",
+                  "fullTitle": "Testy Input BMI Test Zapisu pozycji Historii Pomiarów Test 5",
+                  "timedOut": null,
+                  "duration": 856,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('li').should('be.visible');",
+                  "err": {},
+                  "uuid": "ebd48c7c-c7a4-433e-a7db-c229cae4afa5",
+                  "parentUUID": "1eb60e9f-2ad4-4ed5-be71-a2387842861b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ebd48c7c-c7a4-433e-a7db-c229cae4afa5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 856,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "eb2244db-e60c-4725-8024-5df569f5c783",
+              "title": "Test działania przycisku czyszczenia",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 6",
+                  "fullTitle": "Testy Input BMI Test działania przycisku czyszczenia Test 6",
+                  "timedOut": null,
+                  "duration": 783,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#clear').click();\ncy.get('#wynikBMI').should('not.be.visible');",
+                  "err": {},
+                  "uuid": "3e512c68-b5ad-4958-9dc3-cc7925547000",
+                  "parentUUID": "eb2244db-e60c-4725-8024-5df569f5c783",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3e512c68-b5ad-4958-9dc3-cc7925547000"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 783,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ca4eba75-b740-4f55-93e4-fd7a8a8a206b",
+              "title": "Test ładowania wagi z zapisu historii",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 7",
+                  "fullTitle": "Testy Input BMI Test ładowania wagi z zapisu historii Test 7",
+                  "timedOut": null,
+                  "duration": 1104,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#podajWage').type('60');\ncy.get('#podajWzrost').type('120');\ncy.get('#calculate').click();\ncy.get('#zapisyhistorii > :nth-child(1)').click();\ncy.get('#statusWagi').should('contain', '80');",
+                  "err": {},
+                  "uuid": "240be389-b8de-4a21-9d39-47a184265506",
+                  "parentUUID": "ca4eba75-b740-4f55-93e4-fd7a8a8a206b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "240be389-b8de-4a21-9d39-47a184265506"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1104,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "fe650591-308d-4cd5-8055-5a9256a3d689",
+              "title": "Test ładowania wzrostu z zapisu historii",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 8",
+                  "fullTitle": "Testy Input BMI Test ładowania wzrostu z zapisu historii Test 8",
+                  "timedOut": null,
+                  "duration": 1143,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#podajWage').type('60');\ncy.get('#podajWzrost').type('120');\ncy.get('#calculate').click();\ncy.get('#zapisyhistorii > :nth-child(1)').click();\ncy.get('#statusWzrostu').should('contain', '180');",
+                  "err": {},
+                  "uuid": "acc281ab-aca0-492b-bd27-7f0ff8a07d26",
+                  "parentUUID": "fe650591-308d-4cd5-8055-5a9256a3d689",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "acc281ab-aca0-492b-bd27-7f0ff8a07d26"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1143,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ac59580a-4ee6-458b-b03b-fe3b7459a78c",
+              "title": "Test wskazania wzrostu BMI",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 9",
+                  "fullTitle": "Testy Input BMI Test wskazania wzrostu BMI Test 9",
+                  "timedOut": null,
+                  "duration": 1079,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#podajWage').type('60');\ncy.get('#podajWzrost').type('120');\ncy.get('#calculate').click();\ncy.get('#porownanieBMI').should('contain', 'wzrosło');",
+                  "err": {},
+                  "uuid": "8b8976ac-3b8c-4459-966f-1e47228dd886",
+                  "parentUUID": "ac59580a-4ee6-458b-b03b-fe3b7459a78c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8b8976ac-3b8c-4459-966f-1e47228dd886"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1079,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d7cc27ac-20a5-4c97-9f27-7976299c203c",
+              "title": "Test wskazania spadku BMI",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 10",
+                  "fullTitle": "Testy Input BMI Test wskazania spadku BMI Test 10",
+                  "timedOut": null,
+                  "duration": 1192,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('https://fazi777.github.io/BMI-Host/');\ncy.url().should('contain', 'BMI');\ncy.get('#podajWage').type('80');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#podajWage').type('60');\ncy.get('#podajWzrost').type('180');\ncy.get('#calculate').click();\ncy.get('#porownanieBMI').should('contain', 'Spadło');",
+                  "err": {},
+                  "uuid": "77d2ce5d-1e66-4c2c-bfb9-879063860596",
+                  "parentUUID": "d7cc27ac-20a5-4c97-9f27-7976299c203c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "77d2ce5d-1e66-4c2c-bfb9-879063860596"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1192,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "isoDateTime",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
